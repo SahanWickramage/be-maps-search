@@ -56,8 +56,4 @@ type TomTomResponse = {
     results: Result[];
 };
 
-type TomTomSearchResult = {
-    id: string;
-};
-
-export type { TomTomResponse, TomTomSearchResult };
+export type { TomTomResponse, Result, Address };
