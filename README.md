@@ -38,3 +38,12 @@ Requirements:
 4. The result elements should contain important information about the place (country, municipality, etc)
 5. The returned result should be typed and easily consumable via users of the library
 6. No front-end requirements are necessary, this is purely a backend NodeJS library
+
+# Tomtom API request
+
+```
+curl --location --request GET 'https://api.tomtom.com/search/2/search/{partial-address-input}.json?typeahead=true&limit=10&countrySet=Australia&key={api-key}' \
+--header 'accept: */*'
+```
+
+Note: space character should be replaced with "%20" in "partial-address-input"
