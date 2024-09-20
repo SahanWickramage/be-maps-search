@@ -56,4 +56,8 @@ type TomTomResponse = {
     results: Result[];
 };
 
-export type { TomTomResponse, Result, Address };
+type AutoCompleteDetail = Address & {
+    placeId: string
+};
+
+export type { TomTomResponse, Result, AutoCompleteDetail };

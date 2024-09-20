@@ -1,15 +1,16 @@
 import { getPlaceAutocomplete } from './maps-api'
-import { Address } from './type/maps-api';
-import dotenv from 'dotenv';
+import { AutoCompleteDetail } from './type/maps-api';
+import { replaceSpace } from './util/string-util';
 
-dotenv.config();
-
-export async function getAutoCompleteDetails(address: string): Promise<Address[]> {
+export async function getAutoCompleteDetails(address: string): Promise<AutoCompleteDetail[]> {
     const apiKey = process.env.TOMTOM_API_KEY;
+    const transformedAddress = replaceSpace(address);
     // get autocomplete results
-    const res = await getPlaceAutocomplete(apiKey!, address);
+    const res = await getPlaceAutocomplete(apiKey!, transformedAddress);
     // loop over and get details and map results
     return res.map((result) => ({
-        ...result.address
+        placeId: result?.id,
+        ...result?.address,
+        streetNumber: result?.address?.streetNumber, // some responses don't have 'streetNumber'
     }));
 }
