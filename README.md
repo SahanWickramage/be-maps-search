@@ -48,3 +48,11 @@ curl --location --request GET 'https://api.tomtom.com/search/2/search/{partial-a
 ```
 
 Note: space character should be replaced with "%20" in "partial-address-input"
+
+# Dependencies added afterwards
+
+1. ts-node and nodemon
+```
+yarn add --dev ts-node
+yarn add --dev nodemon
+```
