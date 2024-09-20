@@ -16,8 +16,8 @@ To take a partial address input and return full address suggestions along with t
 Resources:
 ==========
 
-Place Search Documentation: https://developer.tomtom.com/search-api/documentation/search-service/search-service
-API Key: *****
+* Place Search Documentation: https://developer.tomtom.com/search-api/documentation/search-service/search-service
+* API Key: *****
 
 Install:
 ========
@@ -26,7 +26,8 @@ Install:
 Test:
 =====
 1. yarn install
-2. yarn test
+2. add api key .env file 
+3. yarn test
 
 
 Requirements:
