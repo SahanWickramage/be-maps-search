@@ -43,7 +43,7 @@ Requirements:
 # Tomtom API request
 
 ```
-curl --location --request GET 'https://api.tomtom.com/search/2/search/{partial-address-input}.json?typeahead=true&limit=10&countrySet=Australia&key={api-key}' \
+curl --location --request GET 'https://api.tomtom.com/search/2/search/{partial-address-input}.json?typeahead=true&limit=10&countrySet=AU&key={api-key}' \
 --header 'accept: */*'
 ```
 
